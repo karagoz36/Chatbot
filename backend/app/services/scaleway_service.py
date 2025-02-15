@@ -11,7 +11,7 @@ class ScalewayService:
     def __init__(self):
         self.access_key = os.getenv("SCW_ACCESS_KEY")
         self.secret_key = os.getenv("SCW_SECRET_KEY")
-        self.mistral = "***REMOVED***"
+        self.mistral = os.getenv("SCW_IPA")
         self.base_url = "https://api.mistral.ai/v1/chat/completions"
 
     async def generate_text(self, prompt: str):
